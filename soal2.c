@@ -36,8 +36,8 @@ void *playerA(void *arg){
 			int h=4;
 			while(h--){
 				scanf("%d", &lubang);
-				if(boardA[lubang]==0) skorB++;
-				else if(boardA[lubang]==1) skorA++;		
+				if(boardA[lubang]==0 && lubang<=16 && lubang>0) skorB++;
+				else if(boardA[lubang]==1 && lubang<=16 && lubang>0) skorA++;		
 			}
 		
 			printf("Skor Pemain: \n");
@@ -73,8 +73,8 @@ void *playerB(void *arg){
 			int h=4;
 			while(h--){
 				scanf("%d", &lubang);
-				if(boardB[lubang]==0) skorA++;
-				else if(boardB[lubang]==1) skorB++;		
+				if(boardB[lubang]==0 && lubang<=16 && lubang>0) skorA++;
+				else if(boardB[lubang]==1 && lubang<=16 && lubang>0) skorB++;		
 			}
 			printf("Skor Pemain: \n");
 			printf("%s : %d\n", nama1, skorA);
